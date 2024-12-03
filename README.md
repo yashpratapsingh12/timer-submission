@@ -25,7 +25,12 @@ Your task is to improve and enhance an existing Timer App based on the following
 2. **Complete the Following Tasks:**
 
    1. **Match the UI:**
-      - Ensure the app's UI matches the given **screenshots** (provided in the repository).
+      - Ensure the app's UI matches the given **screenshots**.
+      - <img width="250" alt="Screenshot 2024-12-03 at 8 30 53 PM" src="https://github.com/user-attachments/assets/59782304-c254-4d87-9fac-7f92c15bbc6f">
+      - <img width="250" alt="Screenshot 2024-12-03 at 3 29 25 PM" src="https://github.com/user-attachments/assets/9bb429ff-cd78-4411-b222-9d947c3ae79b">
+      - <img width="250" alt="Screenshot 2024-12-03 at 8 21 04 PM" src="https://github.com/user-attachments/assets/a26e8ec7-7e00-4964-8f61-651945f4bbd1">
+      - <img width="250" alt="Screenshot 2024-12-03 at 8 21 30 PM" src="https://github.com/user-attachments/assets/a513a462-540f-45e7-8ac0-0890995ec82d">
+
 
    2. **Simultaneous Timers:**
       - Update the app to allow multiple timers to run simultaneously (currently, only one timer runs at a time).
