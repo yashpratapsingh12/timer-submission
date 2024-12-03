@@ -128,7 +128,7 @@ You will be evaluated on the following points:
 
 ## **Time Constraint**
 
-You are expected to complete this assignment in **16 hours** of focused effort.  
+You are expected to complete this assignment in **4 hours** of focused effort.  
 
 ---
 
