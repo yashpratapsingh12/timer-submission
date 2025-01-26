@@ -41,7 +41,8 @@ export const TimerItem: React.FC<TimerItemProps> = ({ timer }) => {
     }
 
     return () => clearInterval(intervalRef.current!);
-  }, [timer.isRunning, timer.id, timer.remainingTime, timer.title, timerAudio, updateTimer]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timer.isRunning, timer.id]);
 
   const handleRestart = () => {
     hasEndedRef.current = false;
