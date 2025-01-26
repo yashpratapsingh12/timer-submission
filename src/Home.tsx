@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { Plus, Clock } from 'lucide-react';
-import { TimerList } from './components/TimerList';
-import { AddTimerModal } from './components/AddTimerModal';
-import { Toaster } from 'sonner';
+import { useState } from "react";
+import { Plus, Clock } from "lucide-react";
+import { TimerList } from "./components/TimerList";
+import { AddTimerModal } from "./components/AddTimerModal";
+import { Toaster } from "sonner";
+import { PrimaryButton } from "./components/PrimaryButton";
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,17 +17,17 @@ function Home() {
             <Clock className="w-8 h-8 text-blue-600" />
             <h1 className="text-3xl font-bold text-gray-900">Timer App</h1>
           </div>
-          <button
+          <PrimaryButton
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+            className="flex items-center gap-2 rounded-lg "
           >
             <Plus className="w-5 h-5" />
             Add Timer
-          </button>
+          </PrimaryButton>
         </div>
-        
+
         <TimerList />
-        
+
         <AddTimerModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
