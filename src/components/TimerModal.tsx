@@ -5,6 +5,7 @@ import { validateTimerForm } from "../utils/validation";
 import { Timer } from "../types/timer";
 import { SecondaryButton } from "./SecondaryButton";
 import { PrimaryButton } from "./PrimaryButton";
+import { toast } from "sonner";
 
 interface TimerModalProps {
   isOpen: boolean;
@@ -55,6 +56,15 @@ export const TimerModal: React.FC<TimerModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!isTitleValid) {
+      toast.error("Title is required and must be less than 50 characters");
+      return;
+    }
+    if (!isTimeValid) {
+      toast.error("Please set a duration greater than 0");
+      return;
+    }
 
     if (!validateTimerForm({ title, description, hours, minutes, seconds }))
       return;
@@ -200,10 +210,7 @@ export const TimerModal: React.FC<TimerModalProps> = ({
             <SecondaryButton type="button" onClick={resetForm}>
               Cancel
             </SecondaryButton>
-            <PrimaryButton
-              type="submit"
-              disabled={!isTitleValid || !isTimeValid}
-            >
+            <PrimaryButton type="submit">
               {timer ? "Save Changes" : "Add Timer"}
             </PrimaryButton>
           </div>
